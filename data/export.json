@@ -1,0 +1,1949 @@
+[
+    {
+        "id": 1000,
+        "free": false,
+        "name_de": "Artischocken",
+        "name_en": "Artichoke",
+        "latName": "Cynara scolymus",
+        "image": "artichoke",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1001,
+        "free": false,
+        "name_de": "Auberginen",
+        "name_en": "Eggplant",
+        "latName": "Solanum melongena",
+        "image": "aubergine",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1002,
+        "free": false,
+        "name_de": "Blumenkohl",
+        "name_en": "Cauliflower",
+        "latName": "Brassica oleracea var. botrytis",
+        "image": "cauliflower",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1003,
+        "free": false,
+        "name_de": "Brokkoli",
+        "name_en": "Broccoli",
+        "latName": "Brassica Oleracea var. Italica",
+        "image": "broccoli",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1004,
+        "free": false,
+        "name_de": "Grüne Bohnen",
+        "name_en": "Green Beans",
+        "latName": "Phaseolus vulgaris",
+        "image": "greenBeans",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1005,
+        "free": true,
+        "name_de": "Chicoree",
+        "name_en": "Chicory / Witlof",
+        "latName": "Cichorium intybus var. foliosum",
+        "image": "chicory",
+        "foodType": "vegetable",
+        "importOnly": false,
+        "importOnly_US": false,
+        "tempMin": 0,
+        "tempMax": 5,
+        "storageNote": "Chicoree sollte im Gemüsefach des Kühlschranks aufbewahrt werden.",
+        "storageNote_EN": "Chicory should be kept in the crisper drawer of the fridge.",
+        "durability": "manyDays",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "sun.min",
+                "iconColor": "orange",
+                "text": "Chicoree sollte immer dunkel gelagert werden. Unter zu viel Licht kann er sich verfärben und wird schnell bitter."
+            },
+            {
+                "icon": "drop.fill",
+                "iconColor": "blue",
+                "text": "Wickel den Chicoree vor der Lagerung in ein feuchtes Tuch. So bleibt er länger frisch."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "sun.min",
+                "iconColor": "orange",
+                "text": "Chicory should always be stored in the dark. Too much light can discolor the chicory and it can quickly become bitter."
+            },
+            {
+                "icon": "drop.fill",
+                "iconColor": "blue",
+                "text": "Wrap the chicory in a damp towel before putting it in the fridge. This way it will stay fresh for longer."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "import",
+                "length": 5
+            },
+            {
+                "season": "season",
+                "length": 3
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "season",
+                "length": 5
+            },
+            {
+                "season": "import",
+                "length": 4
+            },
+            {
+                "season": "season",
+                "length": 3
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "import",
+                "length": 4
+            },
+            {
+                "season": "season",
+                "length": 6
+            },
+            {
+                "season": "import",
+                "length": 2
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "season",
+                "length": 6
+            },
+            {
+                "season": "import",
+                "length": 2
+            },
+            {
+                "season": "season",
+                "length": 4
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "import",
+                "length": 8
+            },
+            {
+                "season": "season",
+                "length": 4
+            }
+        ],
+        "seasons": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_West": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_MidWest": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import"
+        ],
+        "seasons_US_South": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_NorthEast": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season"
+        ]
+    },
+    {
+        "id": 1006,
+        "free": false,
+        "name_de": "Chinakohl",
+        "name_en": "Chinese Cabbage",
+        "latName": "Brassica rapa subsp. pekinensis",
+        "image": "chineseCabbage",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1007,
+        "free": false,
+        "name_de": "Eisbergsalat",
+        "name_en": "Iceberg Lettuce",
+        "latName": "Lactuca sativa",
+        "image": "icebergLettuce",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1008,
+        "free": false,
+        "name_de": "Erbsen",
+        "name_en": "Peas",
+        "latName": "Pisum sativum",
+        "image": "peas",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1009,
+        "free": false,
+        "name_de": "Feldsalat",
+        "name_en": "Lambs Lettuce",
+        "latName": "Valerianella locusta",
+        "image": "lambsLettuce",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1010,
+        "free": false,
+        "name_de": "Fenchel",
+        "name_en": "Fennel",
+        "latName": "Foeniculum vulgare",
+        "image": "fennel",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1011,
+        "free": false,
+        "name_de": "Paprika",
+        "name_en": "Pepper",
+        "latName": "Capsicum",
+        "image": "pepper",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1012,
+        "free": false,
+        "name_de": "Grünkohl",
+        "name_en": "Kale",
+        "latName": "Brassica oleracea var. sabellica",
+        "image": "kale",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1013,
+        "free": false,
+        "name_de": "Salatgurken",
+        "name_en": "Cucumber",
+        "latName": "Cucumis sativus",
+        "image": "cucumber",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1014,
+        "free": true,
+        "name_de": "Kartoffeln",
+        "name_en": "Potatos",
+        "latName": "Solanum tuberosum",
+        "image": "potatos",
+        "foodType": "vegetable",
+        "importOnly": false,
+        "importOnly_US": false,
+        "tempMin": 7,
+        "tempMax": 10,
+        "storageNote": "Kartoffeln sollten kühl und dunkel gelagert werden, um das Keimen zu verzögern. Am besten eignet sich der Keller oder ein Vorratsraum.",
+        "storageNote_EN": "Potatoes should be stored in a cool and dark place such as a pantry to delay germination.",
+        "durability": "manyMonths",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "bag.fill",
+                "iconColor": "orange",
+                "text": "Kartoffeln sollten trocken, in einem Netz oder Leinenbeutel gelagert werden. Plastikbeutel eigenen sich nicht gut für die Lagerung."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "bag.fill",
+                "iconColor": "orange",
+                "text": "Potatoes should be stored dry, in a net or linen bag. Plastic bags should not be used for storage."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "stock",
+                "length": 5
+            },
+            {
+                "season": "season",
+                "length": 5
+            },
+            {
+                "season": "stock",
+                "length": 2
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "stock",
+                "length": 5
+            },
+            {
+                "season": "season",
+                "length": 5
+            },
+            {
+                "season": "stock",
+                "length": 2
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "stock",
+                "length": 1
+            },
+            {
+                "season": "season",
+                "length": 8
+            },
+            {
+                "season": "stock",
+                "length": 3
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "stock",
+                "length": 6
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "stock",
+                "length": 2
+            }
+        ],
+        "seasons": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock",
+            "stock"
+        ],
+        "seasons_US_West": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_MidWest": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock",
+            "stock"
+        ],
+        "seasons_US_South": [
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock",
+            "stock",
+            "stock"
+        ],
+        "seasons_US_NorthEast": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock",
+            "stock"
+        ]
+    },
+    {
+        "id": 1015,
+        "free": false,
+        "name_de": "Kohlrabi",
+        "name_en": "Kohlrabi",
+        "latName": "Brassica oleracea Gongylodes Group",
+        "image": "kohlrabi",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1016,
+        "free": false,
+        "name_de": "Kopfsalat",
+        "name_en": "Lettuce",
+        "latName": "Lactuca sativa var. capitata",
+        "image": "kopfsalat",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1017,
+        "free": false,
+        "name_de": "Kürbis",
+        "name_en": "Pumpkin",
+        "latName": "Cucurbita",
+        "image": "pumpkin",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1018,
+        "free": false,
+        "name_de": "Mangold",
+        "name_en": "Chard",
+        "latName": "Beta vulgaris subsp",
+        "image": "mangold",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1019,
+        "free": false,
+        "name_de": "Möhren",
+        "name_en": "Carrots",
+        "latName": "Daucus carota subsp. sativus",
+        "image": "carrots",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1020,
+        "free": false,
+        "name_de": "Pastinake",
+        "name_en": "Parsnip",
+        "latName": "Pastinaka sativa",
+        "image": "parsnip",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1021,
+        "free": false,
+        "name_de": "Porree",
+        "name_en": "Leek",
+        "latName": "Allium porrum",
+        "image": "leek",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1022,
+        "free": false,
+        "name_de": "Radieschen",
+        "name_en": "Red Radish",
+        "latName": "Raphanus sativus var. sativus",
+        "image": "redRadish",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1023,
+        "free": false,
+        "name_de": "Rettich",
+        "name_en": "Radish",
+        "latName": "Raphanus ",
+        "image": "radish",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1024,
+        "free": false,
+        "name_de": "Rhabarber",
+        "name_en": "Rhubarb",
+        "latName": "Rheum rhabarbarum",
+        "image": "rhubarb",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1025,
+        "free": false,
+        "name_de": "Rosenkohl",
+        "name_en": "Brussels Sprouts",
+        "latName": "Brassica oleracea var. gemmifera",
+        "image": "brusselSprout",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1026,
+        "free": false,
+        "name_de": "Rote Bete",
+        "name_en": "Beetroot",
+        "latName": "Beta vulgaris subsp. vulgaris Conditiva Group",
+        "image": "beetroot",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1027,
+        "free": false,
+        "name_de": "Rotkohl",
+        "name_en": "Red Cabbage",
+        "latName": "Brassica oleracea var. capitata f. rubra",
+        "image": "redCabbage",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1028,
+        "free": false,
+        "name_de": "Rucola",
+        "name_en": "Arugula",
+        "latName": "Eruca vesicaria ssp. sativa",
+        "image": "rucola",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1029,
+        "free": false,
+        "name_de": "Spargel",
+        "name_en": "Asparagus",
+        "latName": "Asparagus officinalis",
+        "image": "asparagus",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1030,
+        "free": false,
+        "name_de": "Süßkartoffel",
+        "name_en": "Sweet Potato",
+        "latName": "Ipomoea batatas",
+        "image": "sweetPotato",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1031,
+        "free": false,
+        "name_de": "Spinat",
+        "name_en": "Spinach",
+        "latName": "Spinacia oleracea",
+        "image": "spinach",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1032,
+        "free": false,
+        "name_de": "Sellerie (Knolle)",
+        "name_en": "Celery Root",
+        "latName": "Apium graveolens var. rapaceum",
+        "image": "celeryRoot",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1033,
+        "free": false,
+        "name_de": "Sellerie (Staude)",
+        "name_en": "Celery ",
+        "latName": "Apium gravolens var. dulce",
+        "image": "celery",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1034,
+        "free": false,
+        "name_de": "Spitzkohl",
+        "name_en": "Sweatheart Cabbage",
+        "latName": "Brassica oleracea var. capitata f. alba subv. conica",
+        "image": "pointedWhiteCabbage",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1035,
+        "free": false,
+        "name_de": "Steckrübe",
+        "name_en": "Rutabaga",
+        "latName": "Brassica napobrassica",
+        "image": "rutabaga",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1036,
+        "free": false,
+        "name_de": "Tomaten",
+        "name_en": "Tomatoes",
+        "latName": "Solanum lycopersicum",
+        "image": "tomatoes",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1037,
+        "free": false,
+        "name_de": "Weißkohl",
+        "name_en": "White Cabbage",
+        "latName": "Brassica oleracea var. capitata",
+        "image": "whiteCabbage",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1038,
+        "free": false,
+        "name_de": "Wirsing",
+        "name_en": "Savoy Cabbage",
+        "latName": "Brassica oleracea var. sabauda",
+        "image": "savoyCabbage",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1039,
+        "free": false,
+        "name_de": "Zucchini",
+        "name_en": "Zucchini",
+        "latName": "Cucurbita pepo var. giromontiina",
+        "image": "zucchini",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1040,
+        "free": false,
+        "name_de": "Frühlingszwiebeln",
+        "name_en": "Green Onions / Spring Onions",
+        "latName": "Allium fistulosum",
+        "image": "springOnion",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1041,
+        "free": false,
+        "name_de": "Zwiebeln",
+        "name_en": "Onions",
+        "latName": "Allium cepa",
+        "image": "onions",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1042,
+        "free": true,
+        "name_de": "Ananas",
+        "name_en": "Pineapple",
+        "latName": "Ananas comosus",
+        "image": "pineapple",
+        "foodType": "fruit",
+        "importOnly": true,
+        "importOnly_US": true,
+        "tempMin": 7,
+        "tempMax": 12,
+        "storageNote": "Ananas halten sich am längsten im Kühlschrank.",
+        "storageNote_EN": "Pineapple should be kept in the fridge.",
+        "durability": "fewDays",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "drop.fill",
+                "iconColor": "blue",
+                "text": "Die Schnittflächen von angeschnittenen Ananas sollten mit Frischhaltefolie bedeckt werden, um das Austrocknen der Frucht zu verhindern."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "drop.fill",
+                "iconColor": "blue",
+                "text": "The cut surface of a cut pineapple should be covered with cling film to prevent the pineapple from drying out."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasons": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_West": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_MidWest": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_South": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_NorthEast": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ]
+    },
+    {
+        "id": 1043,
+        "free": true,
+        "name_de": "Apfel",
+        "name_en": "Apple",
+        "latName": "Malus",
+        "image": "apple",
+        "foodType": "fruit",
+        "importOnly": false,
+        "importOnly_US": false,
+        "tempMin": 5,
+        "tempMax": 10,
+        "storageNote": "Äpfel sollten im Kühlschrank aufbewahrt und vor dem Verzehr auf Raumtemperatur aufgewärmt werden.",
+        "storageNote_EN": "Apples should be stored in the fridge and warmed to room temperature before consumption.",
+        "durability": "manyMonths",
+        "ethylen": true,
+        "hints": [
+            {
+                "icon": "shippingbox.fill",
+                "iconColor": "green",
+                "text": "Wenn möglich, sollte man Äpfel in einer Pappbox oder einer Tüte mit Löchern aufbewahren. So kann Feuchtigkeit nicht so schnell entweichen und der Apfel bleibt länger knackig."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "shippingbox.fill",
+                "iconColor": "green",
+                "text": "If possible, keep apples in a box or bag with holes. This way moisture cannot escape as quickly and the apple stays crisp longer."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "stock",
+                "length": 7
+            },
+            {
+                "season": "season",
+                "length": 3
+            },
+            {
+                "season": "stock",
+                "length": 2
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "stock",
+                "length": 7
+            },
+            {
+                "season": "season",
+                "length": 5
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "stock",
+                "length": 7
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "stock",
+                "length": 1
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "stock",
+                "length": 5
+            },
+            {
+                "season": "season",
+                "length": 6
+            },
+            {
+                "season": "stock",
+                "length": 1
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "stock",
+                "length": 6
+            },
+            {
+                "season": "season",
+                "length": 5
+            },
+            {
+                "season": "stock",
+                "length": 1
+            }
+        ],
+        "seasons": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "stock",
+            "stock"
+        ],
+        "seasons_US_West": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_MidWest": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock"
+        ],
+        "seasons_US_South": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock"
+        ],
+        "seasons_US_NorthEast": [
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "stock",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "stock"
+        ]
+    },
+    {
+        "id": 1044,
+        "free": true,
+        "name_de": "Apfelsine / Orange",
+        "name_en": "Orange",
+        "latName": "Citrus sinensis",
+        "image": "orange",
+        "foodType": "fruit",
+        "importOnly": true,
+        "importOnly_US": false,
+        "tempMin": 0,
+        "tempMax": 9,
+        "storageNote": "Orangen sollten kühl und gleichzeitig luftig aufbewahrt werden.",
+        "storageNote_EN": "Oranges should be kept cool and airy at the same time.",
+        "durability": "manyDays",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "mouth.fill",
+                "iconColor": "rose",
+                "text": "Grundsätzlich kann man Orangen im Kühlschrank aufbewahren. Hier können sie aber auch Teile ihres Aromas verlieren. Bei Zimmertemperatur sind sie allerdings nicht so lange haltbar."
+            },
+            {
+                "icon": "move.3d",
+                "iconColor": "orange",
+                "text": "Orangen reagieren empfindlich auf das Reifegas Ethylen. Lagere sie daher nicht gemeinsam mit Gemüse oder Obst, das dieses Gas verströmt (z. B. Äpfel oder Tomaten)."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "mouth.fill",
+                "iconColor": "rose",
+                "text": "You can keep oranges in the fridge. But they can also lose parts of their aroma here. However, they do not last that long at room temperature."
+            },
+            {
+                "icon": "move.3d",
+                "iconColor": "orange",
+                "text": "Oranges are sensitive to the ethylene gas. Do not store them together with fruits and vegetables which give off that gas (such as apples or tomatoes)."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "season",
+                "length": 6
+            },
+            {
+                "season": "import",
+                "length": 2
+            },
+            {
+                "season": "season",
+                "length": 4
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "import",
+                "length": 12
+            }
+        ],
+        "seasons": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_West": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_MidWest": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_South": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_NorthEast": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ]
+    },
+    {
+        "id": 1045,
+        "free": false,
+        "name_de": "Aprikose",
+        "name_en": "Apricot",
+        "latName": "Prunus armeniaca",
+        "image": "apricot",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1046,
+        "free": false,
+        "name_de": "Avocado",
+        "name_en": "Avocado",
+        "latName": "Persea americana",
+        "image": "avocado",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1047,
+        "free": false,
+        "name_de": "Banane",
+        "name_en": "Banana",
+        "latName": "Musa",
+        "image": "banana",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1048,
+        "free": false,
+        "name_de": "Birne",
+        "name_en": "Pear",
+        "latName": "Pyrus",
+        "image": "pear",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1049,
+        "free": false,
+        "name_de": "Brombeere",
+        "name_en": "Blackberry",
+        "latName": "Rubus",
+        "image": "blackberry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1050,
+        "free": true,
+        "name_de": "Erdbeere",
+        "name_en": "Strawberry",
+        "latName": "Fragaria",
+        "image": "strawberry",
+        "foodType": "fruit",
+        "importOnly": false,
+        "importOnly_US": false,
+        "tempMin": 3,
+        "tempMax": 7,
+        "storageNote": "Erdbeeren sollten im Kühlschrank gelagert werden.",
+        "storageNote_EN": "Strawberries should be kept in the fridge.",
+        "durability": "fewDays",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "drop.triangle.fill",
+                "iconColor": "blue",
+                "text": "Die Beeren sollten vor der Lagerung nicht abgewaschen werden."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "drop.triangle.fill",
+                "iconColor": "blue",
+                "text": "The berries should not be washed until just before consumption."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "import",
+                "length": 4
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "import",
+                "length": 4
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "import",
+                "length": 2
+            },
+            {
+                "season": "season",
+                "length": 8
+            },
+            {
+                "season": "import",
+                "length": 2
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "import",
+                "length": 3
+            },
+            {
+                "season": "season",
+                "length": 3
+            },
+            {
+                "season": "import",
+                "length": 6
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "season",
+                "length": 5
+            },
+            {
+                "season": "import",
+                "length": 6
+            },
+            {
+                "season": "season",
+                "length": 1
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "import",
+                "length": 4
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "import",
+                "length": 4
+            }
+        ],
+        "seasons": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_West": [
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import"
+        ],
+        "seasons_US_MidWest": [
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_South": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season"
+        ],
+        "seasons_US_NorthEast": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import"
+        ]
+    },
+    {
+        "id": 1051,
+        "free": false,
+        "name_de": "Feige",
+        "name_en": "Fig",
+        "latName": "Ficus carica",
+        "image": "fig",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1052,
+        "free": false,
+        "name_de": "Granatapfel",
+        "name_en": "Pomegranate",
+        "latName": "Punica granatum",
+        "image": "pomegranate",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1053,
+        "free": false,
+        "name_de": "Grapefruit",
+        "name_en": "Grapefruit",
+        "latName": "Citrus aurantium",
+        "image": "grapefruit",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1054,
+        "free": true,
+        "name_de": "Heidelbeere",
+        "name_en": "Blueberry",
+        "latName": "Vaccinium myrtillus",
+        "image": "blueberry",
+        "foodType": "fruit",
+        "importOnly": false,
+        "importOnly_US": false,
+        "tempMin": 1,
+        "tempMax": 3,
+        "storageNote": "Heidelbeeren sollten im Gemüsefach des Kühlschranks aufbewahrt werden.",
+        "storageNote_EN": "Blueberries should be kept in the crisper drawer of the fridge.",
+        "durability": "fewWeeks",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "drop.triangle.fill",
+                "iconColor": "blue",
+                "text": "Um Schimmelbildung zu vermeiden, sollten Heidelbeeren vor der Lagerung kurz abgewaschen und anschließend gut abgetrocknet werden."
+            },
+            {
+                "icon": "shippingbox.fill",
+                "iconColor": "green",
+                "text": "Damit die Beeren ausreichend belüftet werden, sollte man sie wenn möglich in einem Behälter mit kleinen Löchern aufbewaren."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "drop.triangle.fill",
+                "iconColor": "blue",
+                "text": "To avoid mold formation, blueberries should be washed off briefly before storage and then dried well."
+            },
+            {
+                "icon": "shippingbox.fill",
+                "iconColor": "green",
+                "text": "To ensure that the berries are adequately ventilated, they should be stored in a container with small holes."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "import",
+                "length": 5
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "import",
+                "length": 3
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "import",
+                "length": 4
+            },
+            {
+                "season": "season",
+                "length": 5
+            },
+            {
+                "season": "import",
+                "length": 3
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "import",
+                "length": 5
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "import",
+                "length": 3
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "import",
+                "length": 3
+            },
+            {
+                "season": "season",
+                "length": 4
+            },
+            {
+                "season": "import",
+                "length": 5
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "import",
+                "length": 6
+            },
+            {
+                "season": "season",
+                "length": 3
+            },
+            {
+                "season": "import",
+                "length": 3
+            }
+        ],
+        "seasons": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_West": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_MidWest": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_South": [
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import"
+        ],
+        "seasons_US_NorthEast": [
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "import",
+            "season",
+            "season",
+            "season",
+            "import",
+            "import",
+            "import"
+        ]
+    },
+    {
+        "id": 1055,
+        "free": false,
+        "name_de": "Himbeeren",
+        "name_en": "Raspberry",
+        "latName": "Rubus idaeus",
+        "image": "raspberry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1056,
+        "free": false,
+        "name_de": "Holunderbeere",
+        "name_en": "Elderberry",
+        "latName": "Sambucus",
+        "image": "elderberry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1057,
+        "free": false,
+        "name_de": "Johannisbeere",
+        "name_en": "Currants",
+        "latName": "Ribes",
+        "image": "currant",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1058,
+        "free": false,
+        "name_de": "Physalis",
+        "name_en": "Physalis / Ground Cherries",
+        "latName": "Physalis peruviana",
+        "image": "physalis",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1059,
+        "free": false,
+        "name_de": "Kastanie / Marone",
+        "name_en": "Chestnut",
+        "latName": "Castanea",
+        "image": "chestnut",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1060,
+        "free": false,
+        "name_de": "Kiwi",
+        "name_en": "Kiwi",
+        "latName": "Actinidia deliciosa",
+        "image": "kiwi",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1061,
+        "free": false,
+        "name_de": "Kokosnuss",
+        "name_en": "Coconut",
+        "latName": "Cocos nucifera",
+        "image": "coconut",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1062,
+        "free": false,
+        "name_de": "Litschi",
+        "name_en": "Lychee",
+        "latName": "Litchi chinensis",
+        "image": "litchi",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1063,
+        "free": false,
+        "name_de": "Mango",
+        "name_en": "Mango",
+        "latName": "Mangifera indica",
+        "image": "mango",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1064,
+        "free": false,
+        "name_de": "Mirabelle",
+        "name_en": "Mirabelle Plum",
+        "latName": "Prunus domestica subsp. syriaca",
+        "image": "mirabelle",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1065,
+        "free": false,
+        "name_de": "Nektarine",
+        "name_en": "Nectarine",
+        "latName": "Prunus persica var. nucipersica",
+        "image": "nectarine",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1066,
+        "free": false,
+        "name_de": "Papaya",
+        "name_en": "Papaya",
+        "latName": "Carica papaya",
+        "image": "papaya",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1067,
+        "free": false,
+        "name_de": "Passionsfrucht, Maracuja",
+        "name_en": "Passion Fruit",
+        "latName": "Passiflora edulis",
+        "image": "passionfruit",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1068,
+        "free": false,
+        "name_de": "Pfirsich",
+        "name_en": "Peach",
+        "latName": "Prunus persica",
+        "image": "peach",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1069,
+        "free": false,
+        "name_de": "Pflaume",
+        "name_en": "Plum",
+        "latName": "Prunus domestica",
+        "image": "plum",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1070,
+        "free": false,
+        "name_de": "Preiselbeere",
+        "name_en": "Lingonberry",
+        "latName": "Vaccinium vitis-idaea",
+        "image": "cranberry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1071,
+        "free": false,
+        "name_de": "Quitten",
+        "name_en": "Quince",
+        "latName": "Cydonia oblonga",
+        "image": "quince",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1072,
+        "free": false,
+        "name_de": "Sauerkirsche",
+        "name_en": "Sour Cherry",
+        "latName": "Prunus",
+        "image": "cherry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1073,
+        "free": false,
+        "name_de": "Stachelbeere",
+        "name_en": "Gooseberry",
+        "latName": "Ribes uva-crispa",
+        "image": "gooseberry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1074,
+        "free": false,
+        "name_de": "Süßkirsche",
+        "name_en": "Sweet Cherry",
+        "latName": "Prunus avium",
+        "image": "sweetCherry",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1075,
+        "free": false,
+        "name_de": "Tafeltrauben",
+        "name_en": "Grapes",
+        "latName": "Vitis vinifera subsp",
+        "image": "grapes",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1076,
+        "free": false,
+        "name_de": "Wassermelone",
+        "name_en": "Watermelon",
+        "latName": "Citrullus lanatus",
+        "image": "watermelon",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1077,
+        "free": true,
+        "name_de": "Champignons",
+        "name_en": "Mushrooms",
+        "latName": "Agaricus",
+        "image": "champignons",
+        "foodType": "vegetable",
+        "importOnly": false,
+        "importOnly_US": false,
+        "tempMin": 2,
+        "tempMax": 4,
+        "storageNote": "Champignons sollten im Gemüsefach des Kühlschranks aufbewahrt werden.",
+        "storageNote_EN": "Mushrooms should be kept in the crisper drawer of the fridge.",
+        "durability": "fewDays",
+        "ethylen": false,
+        "hints": [
+            {
+                "icon": "shippingbox.fill",
+                "iconColor": "green",
+                "text": "Champignons benötigen Luft zum Atmen. Sie sollten daher nicht in einem geschlossenen Behälter aufbewahrt werden. Wickel sie stattdessen in ein wenig Papier oder in ein trockenes Baumwolltuch ein."
+            },
+            {
+                "icon": "nose.fill",
+                "iconColor": "orange",
+                "text": "Champignons nehmen schnell Gerüche anderer Lebensmittel auf. Lagere sie deshalb am besten mit etwas Abstand zu anderen geruchsintensiven Lebensmitteln."
+            },
+            {
+                "icon": "drop.triangle.fill",
+                "iconColor": "blue",
+                "text": "Champignons sollten ungewaschen gelagert werden. Zu viel Feuchtigkeit führt schnell dazu, dass die Pilze schwammig werden."
+            }
+        ],
+        "hints_EN": [
+            {
+                "icon": "shippingbox.fill",
+                "iconColor": "green",
+                "text": "Mushrooms need air to breathe. Therefore, they should not be kept in a closed container. Instead, wrap them in a bit of paper or in a dry cotton cloth."
+            },
+            {
+                "icon": "nose.fill",
+                "iconColor": "orange",
+                "text": "Mushrooms quickly absorb odors from other foods. It is therefore best to store them away from other odorous foods."
+            },
+            {
+                "icon": "drop.triangle.fill",
+                "iconColor": "blue",
+                "text": "Mushrooms should be stored unwashed. Too much moisture quickly causes the mushrooms to become spongy."
+            }
+        ],
+        "seasonsGroup": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_West": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_MidWest": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_South": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasonsGroup_US_NorthEast": [
+            {
+                "season": "season",
+                "length": 12
+            }
+        ],
+        "seasons": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_West": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_MidWest": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_South": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ],
+        "seasons_US_NorthEast": [
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season",
+            "season"
+        ]
+    },
+    {
+        "id": 1078,
+        "free": false,
+        "name_de": "Zitronen",
+        "name_en": "Lemon",
+        "latName": "Citrus limon",
+        "image": "lemon",
+        "foodType": "fruit"
+    },
+    {
+        "id": 1079,
+        "free": false,
+        "name_de": "Knoblauch",
+        "name_en": "Garlic",
+        "latName": "Allium sativum",
+        "image": "garlic",
+        "foodType": "vegetable"
+    },
+    {
+        "id": 1080,
+        "free": false,
+        "name_de": "Radicchio",
+        "name_en": "Radicchio",
+        "latName": "Cichorium intybus var. foliosum",
+        "image": "radicchio",
+        "foodType": "vegetable"
+    }
+]
