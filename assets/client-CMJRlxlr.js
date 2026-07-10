@@ -1,0 +1,1 @@
+import{n as e,t}from"./app-KwV8W9ns.js";var n=e((e=>{var n=t();e.createRoot=n.createRoot,e.hydrateRoot=n.hydrateRoot}));export default n();
