@@ -1,6 +1,7 @@
 export const translations = {
   de: {
     months: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+    monthNames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
     monthLetters: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
     filters: {
       none: 'Kein Filter',
@@ -88,9 +89,19 @@ export const translations = {
       }
     ],
     bananaAlt: 'Banane',
+    appBannerTitle: 'Saisonkalender Obst & Gemüse',
+    appBannerSubtitle: 'Jondo Software',
+    appBannerAction: 'Öffnen',
+    appBannerClose: 'Banner schließen',
     brandTitle: 'Saisonkalender Obst & Gemüse',
     brandSubtitle: 'by Jondo Software',
     appLogoAlt: 'Saisonkalender App',
+    seo: {
+      homeLabel: 'Kostenloser Saisonkalender',
+      homeHeading: 'Saisonkalender für Obst und Gemüse in Deutschland',
+      homeIntro: 'Finde heraus, welches Obst und Gemüse gerade Saison hat. Die Website zeigt dir saisonale Monate, Lagerhinweise und Tipps zu beliebten Sorten wie Äpfeln, Erdbeeren, Spargel, Tomaten oder Kürbis.',
+      metaDescription: 'Kostenloser Saisonkalender für Obst und Gemüse. Finde heraus, was gerade Saison hat, und entdecke Lagerhinweise und Tipps für viele Sorten in Deutschland.',
+    },
     saveFavorite: 'Als Favorit speichern',
     back: 'Zurück',
     ethylene: 'Ethylen',
@@ -124,6 +135,7 @@ export const translations = {
   },
   en: {
     months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     monthLetters: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
     filters: {
       none: 'No filter',
@@ -211,9 +223,19 @@ export const translations = {
       }
     ],
     bananaAlt: 'Banana',
+    appBannerTitle: 'In Season',
+    appBannerSubtitle: 'Jondo Software',
+    appBannerAction: 'View',
+    appBannerClose: 'Close banner',
     brandTitle: 'In Season',
     brandSubtitle: 'by Jondo Software',
     appLogoAlt: 'Seasonal calendar app',
+    seo: {
+      homeLabel: 'Free seasonal calendar',
+      homeHeading: 'Seasonal calendar for fruit and vegetables',
+      homeIntro: 'Find out which fruit and vegetables are in season right now. The site shows seasonal months, storage notes, and tips for popular foods such as apples, strawberries, asparagus, tomatoes, and pumpkin.',
+      metaDescription: 'Free seasonal calendar for fruit and vegetables. Find what is in season and explore storage notes and tips for many foods in Germany and the United States.',
+    },
     saveFavorite: 'Save as favorite',
     back: 'Back',
     ethylene: 'Ethylene',

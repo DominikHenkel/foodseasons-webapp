@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { FaChevronUp } from 'react-icons/fa';
+import { Head } from 'vite-react-ssg';
 import foodData from '../data/export.json';
 import DetailPage from './DetailPage';
 import {
-  detectLocale,
   getLocalizedItemName,
   getTranslator,
   translations,
@@ -36,6 +36,134 @@ const seasonFieldMap = {
   usSouth: 'seasons_US_South',
   usNortheast: 'seasons_US_NorthEast',
 };
+
+const siteUrl = 'https://inseason-foods.com';
+const freeFoodItems = foodData.filter((item) => item.free);
+
+function getLocaleFromPath(pathname) {
+  return pathname.startsWith('/en') ? 'en' : 'de';
+}
+
+function getLocalizedRootPath(locale) {
+  return locale === 'en' ? '/en/' : '/';
+}
+
+function getLocalizedItemPath(slug, locale) {
+  return locale === 'en' ? `/en/item/${slug}/` : `/item/${slug}/`;
+}
+
+function getPageMetadata(item, locale, t) {
+  if (item) {
+    const itemName = getLocalizedItemName(item, locale);
+    return {
+      title:
+        locale === 'de'
+          ? `${itemName} – Saison, Lagerung & Tipps | Saisonkalender`
+          : `${itemName} – Season, Storage & Tips | In Season`,
+      description:
+        locale === 'de'
+          ? `${itemName} (${item.latName}) im Saisonkalender: Erfahre, wann ${itemName} Saison hat, wie du ${itemName} lagerst und welche Tipps für Frische und Haltbarkeit wichtig sind.`
+          : `${itemName} (${item.latName}) in the seasonal calendar: learn when ${itemName} is in season, how to store it, and which tips help with freshness and shelf life.`,
+      path: getLocalizedItemPath(item.image, locale),
+      image: `${siteUrl}/data/images/${item.image.toLowerCase()}.jpg`,
+    };
+  }
+
+  return {
+    title:
+      locale === 'de'
+        ? 'Saisonkalender Obst & Gemüse – Was hat gerade Saison?'
+        : 'In Season – Seasonal Fruit & Vegetable Calendar',
+    description: t('seo.metaDescription'),
+    path: getLocalizedRootPath(locale),
+    image: `${siteUrl}/og-image.jpg`,
+  };
+}
+
+function SeoHead({ item, locale, t }) {
+  const meta = getPageMetadata(item, locale, t);
+  const canonicalUrl = `${siteUrl}${meta.path}`;
+  const alternateDeUrl = `${siteUrl}${item ? getLocalizedItemPath(item.image, 'de') : '/'}`;
+  const alternateEnUrl = `${siteUrl}${item ? getLocalizedItemPath(item.image, 'en') : '/en/'}`;
+  const itemName = item ? getLocalizedItemName(item, locale) : null;
+  const structuredData = item
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: meta.title,
+        description: meta.description,
+        url: canonicalUrl,
+        inLanguage: locale,
+        about: {
+          '@type': 'Thing',
+          name: itemName,
+          alternateName: item.latName,
+          category: t(`foodTypes.${item.foodType}`),
+        },
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebSite',
+            name: locale === 'de' ? 'Saisonkalender Obst & Gemüse' : 'In Season',
+            url: siteUrl,
+            inLanguage: locale,
+          },
+          {
+            '@type': 'CollectionPage',
+            name: meta.title,
+            description: meta.description,
+            url: canonicalUrl,
+            inLanguage: locale,
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: freeFoodItems.map((food, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                name: getLocalizedItemName(food, locale),
+                url: `${siteUrl}${getLocalizedItemPath(food.image, locale)}`,
+              })),
+            },
+          },
+        ],
+      };
+
+  return (
+    <Head>
+      <html lang={locale} />
+      <title>{meta.title}</title>
+      <meta name="description" content={meta.description} />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="de" href={alternateDeUrl} />
+      <link rel="alternate" hrefLang="en" href={alternateEnUrl} />
+      <link rel="alternate" hrefLang="x-default" href={alternateDeUrl} />
+      <meta property="og:type" content={item ? 'article' : 'website'} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:image" content={meta.image} />
+      <meta property="og:locale" content={locale === 'de' ? 'de_DE' : 'en_US'} />
+      <meta property="og:site_name" content={locale === 'de' ? 'Saisonkalender Obst & Gemüse' : 'In Season'} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:image" content={meta.image} />
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+    </Head>
+  );
+}
+
+function HomeIntro({ t }) {
+  return (
+    <section className="seo-intro" aria-label={t('seo.homeHeading')}>
+      <p className="seo-kicker">{t('seo.homeLabel')}</p>
+      <h1 className="seo-title">{t('seo.homeHeading')}</h1>
+      <p className="seo-description">{t('seo.homeIntro')}</p>
+    </section>
+  );
+}
 
 function collapseSeasonGroups(seasons) {
   const normalizedSeasons = Array.isArray(seasons) && seasons.length > 0 ? seasons : Array(12).fill('import');
@@ -70,10 +198,12 @@ function isYearRoundImport(item, regionId) {
 function App() {
   const currentMonthIndex = new Date().getMonth();
   const navigate = useNavigate();
+  const location = useLocation();
   const { slug } = useParams();
-  const [locale] = useState(() => detectLocale());
+  const locale = useMemo(() => getLocaleFromPath(location.pathname), [location.pathname]);
   const t = useMemo(() => getTranslator(locale), [locale]);
   const monthOptions = translations[locale].months;
+  const monthNames = translations[locale].monthNames;
   const filterOptions = useMemo(
     () => [
       { id: 'none', label: t('filters.none'), icon: FunnelOffIcon },
@@ -105,6 +235,7 @@ function App() {
   const floatingControlsRef = useRef(null);
   const selectedFilter = filterOptions.find((option) => option.id === selectedFilterId) ?? filterOptions[0];
   const selectedMonth = monthOptions[selectedMonthIndex];
+  const selectedMonthName = monthNames[selectedMonthIndex] ?? selectedMonth;
   const monthIndex = selectedMonthIndex;
   const selectedRegion = regionOptions.find((option) => option.id === selectedRegionId) ?? regionOptions[0];
   const selectedTemperature = temperatureOptions.find((option) => option.id === selectedTemperatureUnit) ?? temperatureOptions[0];
@@ -218,20 +349,6 @@ function App() {
     if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('preferredTemp', selectedTemperatureUnit);
   }, [selectedTemperatureUnit]);
 
-  // Dynamic page title for SEO
-  useEffect(() => {
-    if (selectedItem) {
-      const name = getLocalizedItemName(selectedItem, locale);
-      document.title = locale === 'de'
-        ? `${name} – Saison, Lagerung & Tipps | Saisonkalender`
-        : `${name} – Season, Storage & Tips | In Season`;
-    } else {
-      document.title = locale === 'de'
-        ? 'Saisonkalender Obst & Gemüse – Was hat gerade Saison?'
-        : 'In Season – Seasonal Fruit & Vegetable Calendar';
-    }
-  }, [selectedItem, locale]);
-
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
@@ -239,13 +356,15 @@ function App() {
   if (selectedItem) {
     return (
       <>
+        <SeoHead item={selectedItem} locale={locale} t={t} />
         <main className="page-shell">
+          <AppBanner t={t} />
           <DetailPage
             item={selectedItem}
             locale={locale}
             t={t}
             temperatureUnit={selectedTemperatureUnit}
-            onBack={() => navigate('/')}
+            onBack={() => navigate(getLocalizedRootPath(locale))}
             onFavoriteClick={() => setShowDownloadModal(true)}
           />
           <FooterBar
@@ -277,11 +396,14 @@ function App() {
   }
 
   return (
-    <main className="page-shell">
-      <div className="bg-shape bg-shape-left" />
-      <div className="bg-shape bg-shape-right" />
+    <>
+      <SeoHead locale={locale} t={t} />
+      <main className="page-shell">
+        <AppBanner t={t} />
+        <div className="bg-shape bg-shape-left" />
+        <div className="bg-shape bg-shape-right" />
 
-      <section className="calendar-card">
+        <section className="calendar-card">
         <header className="topbar">
           <div className="brand-group">
             <div className="brand-mark">
@@ -294,7 +416,10 @@ function App() {
           </div>
 
           <div className="topbar-main">
-            <h1 className="month-title">{selectedMonth}</h1>
+            <h2 className="month-title">
+              <span className="month-title-short">{selectedMonth}</span>
+              <span className="month-title-long">{selectedMonthName}</span>
+            </h2>
 
             <div className="search-area">
               <input
@@ -373,6 +498,8 @@ function App() {
           </div>
         </header>
 
+        <HomeIntro t={t} />
+
         <section className="month-selection" aria-label={t('monthSelection')}>
           {monthOptions.map((month, index) => {
             const isSelected = selectedMonthIndex === index;
@@ -408,7 +535,7 @@ function App() {
                         onFavoriteClick={() => setShowDownloadModal(true)}
                         onClick={() => {
                           if (item.free) {
-                            navigate('/item/' + item.image);
+                            navigate(getLocalizedItemPath(item.image, locale));
                           } else {
                             setShowDownloadModal(true);
                           }
@@ -417,7 +544,7 @@ function App() {
                     ))}
 
                     {section.title === t('sections.import') && section.lockedItems.length > 0 && (
-                      <PromoCard t={t} onClick={() => setShowDownloadModal(true)} />
+                      <PromoCard locale={locale} t={t} onClick={() => setShowDownloadModal(true)} />
                     )}
 
                     {section.lockedItems.map((item) => (
@@ -467,8 +594,51 @@ function App() {
         onRegionChange={setSelectedRegionId}
         onTemperatureChange={setSelectedTemperatureUnit}
       />
-      <ScrollToTopButton t={t} />
-    </main>
+        <ScrollToTopButton t={t} />
+      </main>
+    </>
+  );
+}
+
+function AppBanner({ t }) {
+  const isAndroid = typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent);
+  const [dismissed, setDismissed] = useState(
+    () => typeof sessionStorage !== 'undefined' && sessionStorage.getItem('appBannerDismissed') === '1'
+  );
+
+  if (!isAndroid || dismissed) return null;
+
+  const storeUrl = 'https://play.google.com/store/apps/details?id=com.app.foodseasons';
+
+  function dismiss() {
+    sessionStorage.setItem('appBannerDismissed', '1');
+    setDismissed(true);
+  }
+
+  return (
+    <div className="app-banner">
+      <button
+        type="button"
+        className="app-banner-close"
+        onClick={dismiss}
+        aria-label={t('appBannerClose')}
+      >
+        ✕
+      </button>
+      <img className="app-banner-icon" src="/data/icon.png" alt="" aria-hidden="true" />
+      <div className="app-banner-text">
+        <span className="app-banner-title">{t('appBannerTitle')}</span>
+        <span className="app-banner-subtitle">{t('appBannerSubtitle')}</span>
+      </div>
+      <a
+        href={storeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="app-banner-cta"
+      >
+        {t('appBannerAction')}
+      </a>
+    </div>
   );
 }
 
@@ -605,11 +775,13 @@ function FooterBar({ onDownloadClick, onPrivacyClick, onTermsClick, t }) {
   );
 }
 
-function PromoCard({ onClick, t }) {
+function PromoCard({ locale, onClick, t }) {
+  const promoImageSrc = locale === 'de' ? '/screenshots/Mock_DE.png' : '/screenshots/Mock_EN.png';
+
   return (
     <article className="promo-card">
       <div className="promo-image" aria-hidden="true">
-        <div className="promo-image-placeholder" />
+        <img className="promo-image-mock" src={promoImageSrc} alt="" loading="lazy" />
       </div>
       <div className="promo-content">
         <h3 className="promo-title">{t('promoTitle')}</h3>
@@ -867,6 +1039,7 @@ export default App;
 function ProductCard({ item, monthIndex, onFavoriteClick, onClick, locale, t }) {
   const seasonGroups = collapseSeasonGroups(item.seasons);
   const itemName = getLocalizedItemName(item, locale);
+  const itemPath = getLocalizedItemPath(item.image, locale);
 
   return (
     <article
@@ -887,7 +1060,19 @@ function ProductCard({ item, monthIndex, onFavoriteClick, onClick, locale, t }) 
       </div>
       <div className="product-info">
         <p className="product-latin">{item.latName}</p>
-        <h3 className="product-name">{itemName}</h3>
+        <h3 className="product-name">
+          {item.free ? (
+            <Link
+              to={itemPath}
+              className="product-name-link"
+              onClick={(event) => event.stopPropagation()}
+            >
+              {itemName}
+            </Link>
+          ) : (
+            itemName
+          )}
+        </h3>
         <div className="availability-grid">
           {seasonGroups.map((group, index) => (
             <div

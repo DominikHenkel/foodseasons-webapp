@@ -16,6 +16,73 @@
   box-sizing: border-box;
 }
 
+/* ── App Banner ────────────────────────────────────────────── */
+.app-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: calc(env(safe-area-inset-top, 0px) + 8px) 12px 8px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-top: -10px;
+}
+
+.app-banner-close {
+  border: 0;
+  background: transparent;
+  color: #888;
+  font-size: 0.9rem;
+  padding: 4px 6px;
+  cursor: pointer;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.app-banner-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.app-banner-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 1px;
+}
+
+.app-banner-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-banner-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.app-banner-cta {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -204,13 +271,15 @@ body {
 }
 
 .calendar-card {
+  --card-pad-x: 20px;
+  --card-pad-top: 18px;
   width: min(1100px, 100%);
   background: transparent;
   border: none;
   border-radius: 0;
   box-shadow: none;
   backdrop-filter: none;
-  padding: 18px 20px 24px;
+  padding: var(--card-pad-top) var(--card-pad-x) 24px;
   animation: slide-in 500ms ease-out;
   position: relative;
   z-index: 1;
@@ -224,11 +293,20 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
+  isolation: isolate;
+  margin: calc(-1 * (var(--card-pad-top) + env(safe-area-inset-top, 0px))) calc(-1 * var(--card-pad-x)) 18px;
+  padding: calc(var(--card-pad-top) + env(safe-area-inset-top, 0px) + 10px) var(--card-pad-x) 14px;
+}
+
+.topbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
-  padding: 10px 0 14px;
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(31, 63, 43, 0.08);
-  margin-bottom: 18px;
+  z-index: -1;
 }
 
 .topbar-main {
@@ -306,6 +384,59 @@ body {
   letter-spacing: 0.2px;
   flex-shrink: 0;
   width: auto;
+}
+
+.month-title-short,
+.month-title-long {
+  display: inline;
+}
+
+.month-title-long {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .month-title-short {
+    display: none;
+  }
+
+  .month-title-long {
+    display: inline;
+  }
+}
+
+.seo-intro {
+  margin: 0 0 18px;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(47, 158, 68, 0.12), rgba(255, 220, 145, 0.28));
+  border: 1px solid rgba(31, 63, 43, 0.08);
+  box-shadow: 0 14px 32px rgba(31, 63, 43, 0.08);
+}
+
+.seo-kicker {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.seo-title {
+  margin: 0 0 10px;
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.7rem, 1.35rem + 1vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.seo-description {
+  margin: 0;
+  max-width: 70ch;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text-soft);
 }
 
 .search-area {
@@ -536,9 +667,9 @@ body {
 
 .promo-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 16px;
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   background-color: rgb(147, 227, 121);
   border-radius: 18px;
   margin-block: 16px;
@@ -546,24 +677,29 @@ body {
 
 .promo-image {
   width: 92px;
-  height: 92px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.7);
-  display: grid;
-  place-items: center;
+  height: 110px;
+  background: transparent;
+  display: block;
   flex-shrink: 0;
+  align-self: flex-end;
+  overflow: hidden;
 }
 
-.promo-image-placeholder {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #9ed39a, #7abb75);
+.promo-image-mock {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  display: block;
+  flex-shrink: 0;
 }
 
 .promo-content {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 16px;
 }
 
 .promo-title {
@@ -689,6 +825,17 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.1px;
+}
+
+.product-name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-name-link:hover,
+.product-name-link:focus-visible {
+  color: var(--accent-strong);
+  text-decoration: underline;
 }
 
 .availability-grid {
@@ -979,6 +1126,12 @@ body {
   font-size: 0.88rem;
   color: var(--text-soft);
   line-height: 1.5;
+}
+
+@media (max-width: 903px) {
+  .promo-image {
+    height: 130px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1354,9 +1507,11 @@ body {
   }
 
   .calendar-card {
+    --card-pad-x: 14px;
+    --card-pad-top: 14px;
     border-radius: 20px;
     width: 100%;
-    padding: 14px 14px 20px;
+    padding: var(--card-pad-top) var(--card-pad-x) 20px;
   }
 
   .topbar {
@@ -1411,6 +1566,19 @@ body {
     width: auto;
   }
 
+  .seo-intro {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .seo-title {
+    font-size: 1.8rem;
+  }
+
+  .seo-description {
+    font-size: 0.92rem;
+  }
+
   .brand-copy-title {
     font-size: 1rem;
   }
@@ -1424,8 +1592,15 @@ body {
   }
 
   .month-selection {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 6px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  .month-button {
+    font-size: 0.8rem;
+    min-height: 32px;
   }
 
   .product-card {

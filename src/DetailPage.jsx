@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { FaLeaf, FaTint, FaSun, FaSnowflake, FaBox, FaWind, FaChevronLeft, FaRegHeart, FaThermometerHalf } from 'react-icons/fa';
 import { getLocalizedHints, getLocalizedItemName, getLocalizedStorageNote, translations } from './i18n';
 
@@ -30,6 +31,10 @@ function formatTemperatureRange(item, unit, t) {
 }
 
 function DetailPage({ item, onBack, onFavoriteClick, locale, t, temperatureUnit }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [item]);
+
   const currentMonthIndex = new Date().getMonth();
   const monthLetters = translations[locale].monthLetters;
   const itemName = getLocalizedItemName(item, locale);
