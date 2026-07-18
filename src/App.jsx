@@ -861,7 +861,7 @@ function DownloadModal({ locale, onClose, t }) {
       ];
 
   const androidAppUrl = 'https://play.google.com/store/apps/details?id=com.app.foodseasons';
-  const iOSAppUrl = 'https://apps.apple.com/de/app/saisonkalender-obst-gemüse/id1559268992';
+  const iOSAppUrl = 'https://apps.apple.com/app/apple-store/id1559268992?pt=120770581&ct=Webapp-inseason&mt=8';
   const androidBadgeSrc =
     locale === 'de'
       ? '/download_badges/GetItOnGooglePlay_Badge_Web_color_German.png'
